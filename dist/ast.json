@@ -1,0 +1,524 @@
+{
+  "type": "Program",
+  "body": [
+    {
+      "type": "Assignment",
+      "name": "x",
+      "value": {
+        "type": "Number",
+        "value": "5",
+        "line": 4,
+        "col": 6
+      },
+      "line": 4,
+      "col": 2
+    },
+    {
+      "type": "Assignment",
+      "name": "y",
+      "value": {
+        "type": "String",
+        "value": "Hello",
+        "line": 5,
+        "col": 12
+      },
+      "line": 5,
+      "col": 2
+    },
+    {
+      "type": "Assignment",
+      "name": "bool",
+      "value": {
+        "type": "Identifier",
+        "name": "true",
+        "line": 8,
+        "col": 12
+      },
+      "line": 8,
+      "col": 5
+    },
+    {
+      "type": "Assignment",
+      "name": "count",
+      "value": {
+        "type": "Number",
+        "value": "0",
+        "line": 11,
+        "col": 10
+      },
+      "line": 11,
+      "col": 6
+    },
+    {
+      "type": "While",
+      "condition": {
+        "type": "Binary",
+        "operator": "<",
+        "left": {
+          "type": "Identifier",
+          "name": "count",
+          "line": 12,
+          "col": 13
+        },
+        "right": {
+          "type": "Number",
+          "value": "5",
+          "line": 12,
+          "col": 17
+        },
+        "line": 12,
+        "col": 17
+      },
+      "body": [
+        {
+          "type": "Assignment",
+          "name": "count",
+          "value": {
+            "type": "Binary",
+            "operator": "+",
+            "left": {
+              "type": "Identifier",
+              "name": "count",
+              "line": 14,
+              "col": 18
+            },
+            "right": {
+              "type": "Number",
+              "value": "1",
+              "line": 14,
+              "col": 22
+            },
+            "line": 14,
+            "col": 22
+          },
+          "line": 14,
+          "col": 10
+        }
+      ],
+      "line": 12,
+      "col": 6
+    },
+    {
+      "type": "Assignment",
+      "name": "score",
+      "value": {
+        "type": "Number",
+        "value": "90",
+        "line": 18,
+        "col": 11
+      },
+      "line": 18,
+      "col": 6
+    },
+    {
+      "type": "If",
+      "condition": {
+        "type": "Binary",
+        "operator": ">=",
+        "left": {
+          "type": "Identifier",
+          "name": "score",
+          "line": 19,
+          "col": 10
+        },
+        "right": {
+          "type": "Number",
+          "value": "90",
+          "line": 19,
+          "col": 16
+        },
+        "line": 19,
+        "col": 16
+      },
+      "body": [
+        {
+          "type": "Assignment",
+          "name": "grade",
+          "value": {
+            "type": "String",
+            "value": "A",
+            "line": 20,
+            "col": 16
+          },
+          "line": 20,
+          "col": 10
+        }
+      ],
+      "else": null,
+      "line": 19,
+      "col": 3
+    },
+    {
+      "type": "Else",
+      "body": [
+        {
+          "type": "Assignment",
+          "name": "grade",
+          "value": {
+            "type": "String",
+            "value": "B",
+            "line": 22,
+            "col": 16
+          },
+          "line": 22,
+          "col": 10
+        }
+      ],
+      "line": 21,
+      "col": 7,
+      "condition": {
+        "type": "Binary",
+        "operator": ">=",
+        "left": {
+          "type": "Identifier",
+          "name": "score",
+          "line": 21,
+          "col": 17
+        },
+        "right": {
+          "type": "Number",
+          "value": "80",
+          "line": 21,
+          "col": 23
+        },
+        "line": 21,
+        "col": 23
+      }
+    },
+    {
+      "type": "Else",
+      "body": [
+        {
+          "type": "Assignment",
+          "name": "grade",
+          "value": {
+            "type": "String",
+            "value": "C",
+            "line": 24,
+            "col": 16
+          },
+          "line": 24,
+          "col": 10
+        }
+      ],
+      "line": 23,
+      "col": 7,
+      "condition": {
+        "type": "Binary",
+        "operator": ">=",
+        "left": {
+          "type": "Identifier",
+          "name": "score",
+          "line": 23,
+          "col": 17
+        },
+        "right": {
+          "type": "Number",
+          "value": "70",
+          "line": 23,
+          "col": 23
+        },
+        "line": 23,
+        "col": 23
+      }
+    },
+    {
+      "type": "Else",
+      "body": [
+        {
+          "type": "Assignment",
+          "name": "grade",
+          "value": {
+            "type": "String",
+            "value": "D",
+            "line": 26,
+            "col": 16
+          },
+          "line": 26,
+          "col": 10
+        }
+      ],
+      "line": 25,
+      "col": 7
+    },
+    {
+      "type": "Print",
+      "value": {
+        "type": "Binary",
+        "operator": "+",
+        "left": {
+          "type": "String",
+          "value": "Grade:",
+          "line": 28,
+          "col": 15
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "grade",
+          "line": 28,
+          "col": 23
+        },
+        "line": 28,
+        "col": 23
+      },
+      "line": 28,
+      "col": 6
+    },
+    {
+      "type": "Assignment",
+      "name": "a",
+      "value": {
+        "type": "Number",
+        "value": "10",
+        "line": 31,
+        "col": 7
+      },
+      "line": 31,
+      "col": 2
+    },
+    {
+      "type": "Assignment",
+      "name": "b",
+      "value": {
+        "type": "Number",
+        "value": "3",
+        "line": 32,
+        "col": 6
+      },
+      "line": 32,
+      "col": 2
+    },
+    {
+      "type": "Assignment",
+      "name": "result",
+      "value": {
+        "type": "Binary",
+        "operator": "*",
+        "left": {
+          "type": "Binary",
+          "operator": "+",
+          "left": {
+            "type": "Identifier",
+            "name": "a",
+            "line": 33,
+            "col": 11
+          },
+          "right": {
+            "type": "Identifier",
+            "name": "b",
+            "line": 33,
+            "col": 15
+          },
+          "line": 33,
+          "col": 16
+        },
+        "right": {
+          "type": "Number",
+          "value": "2",
+          "line": 33,
+          "col": 19
+        },
+        "line": 33,
+        "col": 19
+      },
+      "line": 33,
+      "col": 7
+    },
+    {
+      "type": "Print",
+      "value": {
+        "type": "Binary",
+        "operator": "+",
+        "left": {
+          "type": "String",
+          "value": "Arithmetic result:",
+          "line": 34,
+          "col": 27
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "result",
+          "line": 34,
+          "col": 36
+        },
+        "line": 34,
+        "col": 36
+      },
+      "line": 34,
+      "col": 6
+    },
+    {
+      "type": "Assignment",
+      "name": "greeting",
+      "value": {
+        "type": "String",
+        "value": "Hi",
+        "line": 37,
+        "col": 16
+      },
+      "line": 37,
+      "col": 9
+    },
+    {
+      "type": "Assignment",
+      "name": "name",
+      "value": {
+        "type": "String",
+        "value": "Opu",
+        "line": 38,
+        "col": 13
+      },
+      "line": 38,
+      "col": 5
+    },
+    {
+      "type": "Assignment",
+      "name": "message",
+      "value": {
+        "type": "Binary",
+        "operator": "+",
+        "left": {
+          "type": "Binary",
+          "operator": "+",
+          "left": {
+            "type": "Identifier",
+            "name": "greeting",
+            "line": 39,
+            "col": 19
+          },
+          "right": {
+            "type": "String",
+            "value": " ",
+            "line": 39,
+            "col": 25
+          },
+          "line": 39,
+          "col": 26
+        },
+        "right": {
+          "type": "Identifier",
+          "name": "name",
+          "line": 39,
+          "col": 32
+        },
+        "line": 39,
+        "col": 32
+      },
+      "line": 39,
+      "col": 8
+    },
+    {
+      "type": "Print",
+      "value": {
+        "type": "Identifier",
+        "name": "message",
+        "line": 40,
+        "col": 14
+      },
+      "line": 40,
+      "col": 6
+    },
+    {
+      "type": "Function",
+      "name": "add",
+      "parameters": [
+        "a",
+        "b"
+      ],
+      "body": [
+        {
+          "type": "Return",
+          "value": {
+            "type": "Binary",
+            "operator": "+",
+            "left": {
+              "type": "Identifier",
+              "name": "a",
+              "line": 50,
+              "col": 13
+            },
+            "right": {
+              "type": "Identifier",
+              "name": "b",
+              "line": 50,
+              "col": 17
+            },
+            "line": 50,
+            "col": 17
+          },
+          "line": 50,
+          "col": 11
+        }
+      ],
+      "line": 49,
+      "col": 9
+    },
+    {
+      "type": "Function",
+      "name": "subtract",
+      "parameters": [
+        "a",
+        "b"
+      ],
+      "body": [
+        {
+          "type": "Return",
+          "value": {
+            "type": "Binary",
+            "operator": "-",
+            "left": {
+              "type": "Identifier",
+              "name": "a",
+              "line": 54,
+              "col": 13
+            },
+            "right": {
+              "type": "Identifier",
+              "name": "b",
+              "line": 54,
+              "col": 17
+            },
+            "line": 54,
+            "col": 17
+          },
+          "line": 54,
+          "col": 11
+        }
+      ],
+      "line": 53,
+      "col": 9
+    },
+    {
+      "type": "Assignment",
+      "name": "c",
+      "value": {
+        "type": "Identifier",
+        "name": "add",
+        "line": 57,
+        "col": 8
+      },
+      "line": 57,
+      "col": 2
+    },
+    {
+      "type": "FunctionCall",
+      "name": "add",
+      "arguments": [
+        {
+          "type": "Identifier",
+          "name": "a",
+          "line": 57,
+          "col": 10
+        },
+        {
+          "type": "Identifier",
+          "name": "b",
+          "line": 57,
+          "col": 13
+        }
+      ],
+      "line": 57,
+      "col": 8
+    }
+  ]
+}

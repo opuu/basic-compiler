@@ -1,0 +1,4 @@
+[
+  "Variable grade already declared at line 22 and column 10, cannot redeclare at line 24 and column 10",
+  "Variable grade already declared at line 22 and column 10, cannot redeclare at line 26 and column 10"
+]
