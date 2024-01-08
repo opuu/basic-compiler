@@ -8,31 +8,31 @@ import fs from "fs";
 
 // safely handles circular references in JSON.stringify
 JSON.safeStringify = (obj, indent = 2) => {
-    let cache = [];
-    const retVal = JSON.stringify(
-        obj,
-        (key, value) =>
-            typeof value === "object" && value !== null
-                ? cache.includes(value)
-                    ? undefined // Duplicate reference found, discard key
-                    : cache.push(value) && value // Store value in our collection
-                : value,
-        indent
-    );
-    cache = null;
-    return retVal;
+  let cache = [];
+  const retVal = JSON.stringify(
+    obj,
+    (key, value) =>
+      typeof value === "object" && value !== null
+        ? cache.includes(value)
+          ? undefined // Duplicate reference found, discard key
+          : cache.push(value) && value // Store value in our collection
+        : value,
+    indent
+  );
+  cache = null;
+  return retVal;
 };
 
 let code = "";
 
 // load code from file
 try {
-    code = fs.readFileSync(process.argv[2], "utf8");
+  code = fs.readFileSync(process.argv[2], "utf8");
 } catch (err) {
-    console.log(`Unable to load file ${process.argv[2]}`);
-    process.exit(1);
+  console.log(`Unable to load file ${process.argv[2]}`);
+  process.exit(1);
 } finally {
-    console.log(`Start: loaded file ${process.argv[2]}`);
+  console.log(`Start: loaded file ${process.argv[2]}`);
 }
 
 // Lexical Analysis
@@ -59,11 +59,15 @@ let semanticAnalyzer = new SemanticAnalyzer(ast);
 let warnings = semanticAnalyzer.analyze();
 console.log("Step 3: Semantic Analysis Complete");
 
+warnings.forEach((warning) => {
+  console.log("Warning: ", warning);
+});
+
 // save errors to file (in dist folder)
 fs.writeFileSync(
-    "./dist/warnings.json",
-    JSON.safeStringify(warnings, 2),
-    "utf8"
+  "./dist/warnings.json",
+  JSON.safeStringify(warnings, 2),
+  "utf8"
 );
 
 // Intermediate Code Generation
@@ -73,9 +77,9 @@ let intermediatecode = intermediateCodeGenerator.generate();
 console.log("Step 4: Intermediate Code Generation Complete");
 
 fs.writeFileSync(
-    "./dist/intermediatecode.json",
-    JSON.safeStringify(intermediatecode, 2),
-    "utf8"
+  "./dist/intermediatecode.json",
+  JSON.safeStringify(intermediatecode, 2),
+  "utf8"
 );
 
 // Code Optimization
@@ -85,9 +89,9 @@ let optimizedCode = codeOptimizer.optimize();
 console.log("Step 5: Code Optimization Complete");
 
 fs.writeFileSync(
-    "./dist/optimizedCode.json",
-    JSON.safeStringify(optimizedCode, 2),
-    "utf8"
+  "./dist/optimizedCode.json",
+  JSON.safeStringify(optimizedCode, 2),
+  "utf8"
 );
 
 // Code Generation
